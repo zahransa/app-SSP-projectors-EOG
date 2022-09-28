@@ -31,7 +31,7 @@ raw = mne.io.read_raw_fif(fname, verbose=False)
 #                                                          n_eeg=1, average=True)
 
 eog_projs, eog_events = mne.preprocessing.compute_proj_eog(raw, n_grad=config['n_grad'], n_mag=config['n_mag'],
-                                                         n_eeg=config['n_eeg'], average=True)
+                                                         n_eeg=config['n_eeg'], average=config['average'])
 
 # eog_projs, eog_events = mne.preprocessing.compute_proj_eog(raw, None, config['tmin'], config['tmax'],
 #                                    config['n_grad'], config['n_mag'], config['n_eeg'], config['l_freq'],
