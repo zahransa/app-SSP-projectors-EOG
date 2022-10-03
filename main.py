@@ -33,10 +33,6 @@ raw = mne.io.read_raw_fif(fname, verbose=False)
 eog_projs, eog_events = mne.preprocessing.compute_proj_eog(raw, n_grad=config['n_grad'], n_mag=config['n_mag'],
                                                          n_eeg=config['n_eeg'], average=config['average'])
 
-# == FIGURES ==
-plt.figure(1)
-fig_ep = mne.viz.plot_projs_topomap(eog_projs, info=raw.info)
-fig_ep.savefig(os.path.join('out_figs','eog_projectors.png'))
 
 
 # eog_projs, eog_events = mne.preprocessing.compute_proj_eog(raw, None, config['tmin'], config['tmax'],
@@ -54,3 +50,9 @@ fig_ep.savefig(os.path.join('out_figs','eog_projectors.png'))
 
 
 mne.write_proj('out_dir/blink-proj.fif', eog_projs)
+
+# == FIGURES ==
+plt.figure(1)
+fig_ep = mne.viz.plot_projs_topomap(eog_projs, info=raw.info)
+fig_ep.savefig(os.path.join('out_figs','eog_projectors.png'))
+
