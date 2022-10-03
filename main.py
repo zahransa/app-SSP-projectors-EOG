@@ -11,8 +11,15 @@ import json
 import mne
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
+
 import matplotlib.image
+
+import matplotlib.pyplot as plt
+
+#workaround for -- _tkinter.TclError: invalid command name ".!canvas"
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 
 # Current path
