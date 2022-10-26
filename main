@@ -32,11 +32,6 @@ cat << EOF > product.json
            "type": "image/png",
 	       "name": "EEG",
            "base64": "$(base64 -w 0 out_figs/eeg.png)"
-       },
-       {
-           "type": "image/png",
-	       "name": "Joint plot",
-           "base64": "$(base64 -w 0 out_figs/joint-plot.png)"
        }
 ]
 }
