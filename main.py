@@ -56,7 +56,7 @@ eog_projs, eog_events = mne.preprocessing.compute_proj_eog(raw, n_grad=config['n
 #             config['qrs_threshold'], config['filter_method'], None, config['copy'], config['return_drop_log'], config['meg'])
 
 
-mne.write_proj('out_dir/blink-proj.fif', eog_projs)
+mne.write_proj('out_dir/proj.fif', eog_projs, overwrite=True)
 
 # == FIGURES ==
 plt.figure(1)
