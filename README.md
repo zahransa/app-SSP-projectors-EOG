@@ -13,8 +13,15 @@ Brainlife App to compute SSP (signal-space projection) vectors for EOG artifacts
 
 1) Input file is:
     * `meg/fif` meg data file
+    
+2) Input parameters are:
+    * `n_grad`: Number of SSP vectors for gradiometers.   
+    * `n_mag`: Number of SSP vectors for magnetometers.
+    * `n_eeg`: Number of SSP vectors for EEG.
+    * `average`: Compute SSP after averaging. Default is True.
+ 
 
-2) Ouput files are:
+3) Ouput files are:
     * `EOG projectors`
     * a plot of the EOG projectors
    
